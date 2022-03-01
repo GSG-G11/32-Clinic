@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,700;1,300;1,400&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,700;1,300;1,400&family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -17,8 +17,8 @@
   </head>
 
   <body>
-    <section class="landing-page">
-      <p class="app-title">32 Clinc</p>
+    <section class="landing-page hidden">
+      <h1 class="app-title">32 Clinc</h1>
       <div class="app-logo-div">
         <img class="app-logo" src="./assets/main.jpg" alt="app-logo" />
       </div>
@@ -26,6 +26,25 @@
         <button type="button" class="book-button">Book your appointment</button>
         <button type="button" class="login-button">Login as a Doctor</button>
       </div>
+    </section>
+
+    <section class="add-appointment">
+      <h2>Add Appointment</h2>
+      <form action="/add-appointment" id="add-appointment-form">
+        <label class="input-label" for="name">Name: </label>
+        <input placeholder="Enter your name" class="input" id="name" name="name" type="text" />
+        <label class="input-label" for="age">Age:</label>
+        <input placeholder="Enter your age" class="input" class="input" id="age" name="age" type="number" />
+        <label class="input-label" for="mobile">Mobile:</label>
+        <input placeholder="Enter your mobile number" class="input" id="mobile" name="mobile" type="number" />
+        <label class="input-label" for="doctors">Doctor:</label>
+        <select  class="input" name="doctors" id="doctors"></select>
+        <label class="input-label" for="date">Date:</label>
+        <input placeholder="Enter your name" class="input" id="date" name="date" type="date" />
+        <label class="input-label" for="time">Time:</label>
+        <input class="input" id="time" name="time" type="time" />
+        <input class="input" id="submit" type="submit" value="Add" />
+      </form>
     </section>
 
     <script src="js/dom.js"></script>
