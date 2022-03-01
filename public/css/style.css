@@ -4,10 +4,23 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
-.hidden {
-  display: none;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+input {
+  border: 0;
+  outline: 0;
+}
+input:focus {
+  outline: none !important;
+}
+::placeholder {
+  color: #fff;
+  opacity: 1; 
+}
+
 .landing-page {
   display: flex;
   flex-direction: column;
@@ -38,7 +51,8 @@
   margin-top: 24px;
 }
 .book-button,
-.login-button {
+.login-button,
+#submit {
   all: unset;
   background-color: #38c6f4;
   color: #fff;
@@ -52,6 +66,38 @@
 }
 
 .book-button:hover,
-.login-button:hover {
+.login-button:hover,
+#submit:hover {
   background-color: #045081;
+}
+
+.add-appointment {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+#add-appointment-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.input {
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #045081;
+}
+#submit{
+  border-radius: 5px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
