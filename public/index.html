@@ -18,7 +18,7 @@
 
   <body>
     <section class="landing-page ">
-      <h1 class="app-title">32 Clinc</h1>
+      <h1 class="app-title">32 Clinic</h1>
       <div class="app-logo-div">
         <img class="app-logo" src="./assets/main.jpg" alt="app-logo" />
       </div>
@@ -26,6 +26,29 @@
         <button type="button" class="book-button">Book your appointment</button>
         <button type="button" class="login-button">Login as a Doctor</button>
       </div>
+    </section>
+
+    <section class="login-page hidden">
+      <h2 class="form-title">Login</h2>
+      <form action="/login" class="form" id="login-form">
+        <label class="input-label" for="username">Username: </label>
+        <input
+          placeholder="Enter your name"
+          class="input"
+          id="username"
+          name="username"
+          type="text"
+        />
+        <label class="input-label" for="password">Password:</label>
+        <input
+          placeholder="Enter your password"
+          class="input"
+          class="input"
+          id="password"
+          name="password"
+          type="password"
+        />
+      </form>
     </section>
 
     <section class="appointment-search-section hidden">
@@ -45,20 +68,45 @@
         <p>Time: 10:00 am</p>
       </div>
     </section>
-    
+
     <section class="add-appointment hidden">
-      <h2>Add Appointment</h2>
-      <form action="/add-appointment" id="add-appointment-form">
+      <h2 class="form-title">Add Appointment</h2>
+      <form action="/add-appointment" class="form" id="add-appointment-form">
         <label class="input-label" for="name">Name: </label>
-        <input placeholder="Enter your name" class="input" id="name" name="name" type="text" />
+        <input
+          placeholder="Enter your name"
+          class="input"
+          id="name"
+          name="name"
+          type="text"
+        />
         <label class="input-label" for="age">Age:</label>
-        <input placeholder="Enter your age" class="input" class="input" id="age" name="age" type="number" />
+        <input
+          placeholder="Enter your age"
+          class="input"
+          class="input"
+          id="age"
+          name="age"
+          type="number"
+        />
         <label class="input-label" for="mobile">Mobile:</label>
-        <input placeholder="Enter your mobile number" class="input" id="mobile" name="mobile" type="number" />
+        <input
+          placeholder="Enter your mobile number"
+          class="input"
+          id="mobile"
+          name="mobile"
+          type="number"
+        />
         <label class="input-label" for="doctors">Doctor:</label>
-        <select  class="input" name="doctors" id="doctors"></select>
+        <select class="input" name="doctors" id="doctors"></select>
         <label class="input-label" for="date">Date:</label>
-        <input placeholder="Enter your name" class="input" id="date" name="date" type="date" />
+        <input
+          placeholder="Enter your name"
+          class="input"
+          id="date"
+          name="date"
+          type="date"
+        />
         <label class="input-label" for="time">Time:</label>
         <input class="input" id="time" name="time" type="time" />
         <input class="input" id="submit" type="submit" value="Add" />

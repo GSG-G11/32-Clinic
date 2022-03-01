@@ -78,13 +78,16 @@ input:focus {
   width: 90%;
 }
 
-#add-appointment-form {
+.form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
 }
-
+.form-title{
+  margin-bottom: 20px;
+  text-align: center;
+}
 .input {
   border-radius: 5px;
   color: #fff;
