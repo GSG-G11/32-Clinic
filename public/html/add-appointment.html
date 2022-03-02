@@ -52,14 +52,15 @@
         type="tel"
       />
       <label class="input-label" for="doctors">Doctor:</label>
-      <select class="input" name="doctors" id="doctors" required></select>
+      <select class="input" name="doctors" id="doctors" >
+      </select><!-- Should Be REQUIRED-->
       <label class="input-label" for="date">Date:</label>
-      <input class="input" id="date" name="date" type="date" required />
+      <input class="input" id="date" name="date" type="date" required/>       
       <label class="input-label" for="time">Time:</label>
       <input class="input" id="time" name="time" type="time" required />
       <input class="input" id="submit" type="submit" value="Add" />
     </form>
   </section>
-
+<script src="../js/dom.js"></script>
 </body>
 </html>
