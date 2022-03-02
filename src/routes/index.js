@@ -1,27 +1,14 @@
 const express = require('express');
 const addAppointment = require('../controllers/addAppointment');
+const getAllAppointments = require('../controllers/getAllApointments');
 const getAllDoctors = require('../controllers/getAllDoctors');
-const getDoctorDataFromDB = require('../database/queries/doctorDataFromDb');
+const validateDoctor = require('../controllers/validateDoctor');
 
 const router = express.Router();
 
 router.post('/add-appointment', addAppointment);
 router.get('/doctors', getAllDoctors);
-router.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  console.log({ username, password });
-  getDoctorDataFromDB()
-    .then((data) => {
-      const filteredResult = data.rows.filter(
-        (element) => element.username === username && element.password === password,
-      );
-      if (filteredResult.length > 0) {
-        res.json({ message: 'sucess' });
-      } else {
-        res.json({ message: 'user name wrong' });
-      }
-    })
-    .catch((err) => console.log(err));
-});
+router.post('/login', validateDoctor);
+router.get('/appointments', getAllAppointments);
 
 module.exports = router;
