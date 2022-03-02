@@ -18,9 +18,9 @@ CREATE TABLE appointments (
   age INT NOT NULL,
   mobile INT NOT NULL,
   date DATE NOT NULL,
-  time TIME NOT NULL,
-  doctors_id INT,
-  FOREIGN KEY (doctors_id) REFERENCES doctors(id)
+  time TIME NOT NULL
+  -- doctors_id INT,
+  -- FOREIGN KEY (doctors_id) REFERENCES doctors(id)
 );
 
 COMMIT;
