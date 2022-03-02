@@ -7,7 +7,7 @@ CREATE TABLE doctors (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(50) NOT NULL,
   gender VARCHAR(50) NOT NULL,
-  mobile INT NOT NULL,
+  mobile VARCHAR(18) NOT NULL,
   username VARCHAR(30) NOT NULL,
   password VARCHAR(15) NOT NULL
 );
@@ -16,11 +16,11 @@ CREATE TABLE appointments (
   id SERIAL NOT NULL PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   age INT NOT NULL,
-  mobile INT NOT NULL,
+  mobile VARCHAR(18) NOT NULL,
   date DATE NOT NULL,
-  time TIME NOT NULL
-  -- doctors_id INT,
-  -- FOREIGN KEY (doctors_id) REFERENCES doctors(id)
+  time TIME NOT NULL,
+  doctor_id INT,
+  FOREIGN KEY (doctor_id) REFERENCES doctors(id)
 );
 
 COMMIT;
