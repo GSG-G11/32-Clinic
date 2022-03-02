@@ -1,8 +1,10 @@
 const { Pool } = require('pg');
 require('env2')('.env');
 
-if (!process.env.DB_URL_PRODUCTION) {
-  throw new Error('No DB_URL');
+if (process.env.NODE_ENV === 'test') {
+  dbUrl = process.env.DB_URL_TEST;
+} else {
+  dbUrl = process.env.DB_URL_PRODUCTION;
 }
 const options = {
   connectionString: process.env.DB_URL_PRODUCTION,
