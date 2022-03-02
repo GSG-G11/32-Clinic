@@ -3,7 +3,7 @@ const getDoctorNameFromDB = require('../database/queries/getDoctorNameFromDB');
 const getAllDoctors = (req, res) => {
   getDoctorNameFromDB()
     .then((data) => {
-      res.json({ 
+      res.json({
         statusCode: 200,
         names: data.rows,
       });
