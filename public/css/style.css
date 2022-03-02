@@ -145,6 +145,19 @@ input:focus {
   width: 100%;
 }
 
-.hidden {
-  display: none;
+/* .Patient{
+  border-collapse: collapse;
+  width: 100%;
 }
+.patient td, .patient th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.patient-detalis{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0704aa;
+  color: white;
+} */

@@ -1,4 +1,4 @@
-const connection = require("../config/connection");
+const connection = require('../config/connection');
 
 const getDoctorNameFromDB = () => connection.query('SELECT name FROM doctors');
 
