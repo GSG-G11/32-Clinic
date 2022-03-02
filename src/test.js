@@ -25,7 +25,6 @@ describe('test routes', () => {
       .expect('Content-Type', /html/)
       .end((err, res) => {
         if (err) return done();
-        console.log(res.body);
         return done();
       });
   });

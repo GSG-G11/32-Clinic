@@ -14,6 +14,9 @@ const validateDoctor = (req, res) => {
         res.json({ message: 'user name wrong' });
       }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      res.json({ message: 'There is an Error' });
+    });
+    
 };
 module.exports = validateDoctor;
