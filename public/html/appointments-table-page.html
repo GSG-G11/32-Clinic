@@ -3,31 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="" type="image/x-icon" />
-    <!-- To be added -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,700;1,300;1,400&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>32 Clinic</title>
+    <title>Search For Appointment</title>
   </head>
-
   <body>
-    <section class="landing-page">
-      <h1 class="app-title">32 Clinic</h1>
-      <div class="app-logo-div">
-        <img class="app-logo" src="./assets/main.jpg" alt="app-logo" />
+    <section class="appointment-search-section">
+      <div class="search-section">
+        <input
+          required
+          pattern="[A-Za-z]{3,30}"
+          title="At least 3 letters & less than 30"
+          class="search-input"
+          placeholder="Enter patient name"
+          type="text"
+        />
+        <button class="search-button" type="button">Search</button>
       </div>
-      <div class="buttons-section">
-        <a class="book-button"  href="html/add-appointment.html" >Book your appointment</a>
-        <a class="login-button"  href="html/login-page.html">Login as a Doctor</a>
+      <hr class="line" />
+      <div class="appointment-card">
+        <p>Name : Salma</p>
+        <p>Age : 26 Y.</p>
+        <p>Date : 22/3/2022</p>
+        <p>Time: 10:00 am</p>
       </div>
     </section>
-
-    <script src="js/dom.js"></script>
   </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,700;1,300;1,400&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Appointment</title>
+</head>
+<body>
+  <section class="add-appointment">
+    <h2 class="form-title">Add Appointment</h2>
+    <form action="/add-appointment" class="form" id="add-appointment-form" method="post">
+      <label class="input-label" for="name">Name: </label>
+      <input
+        placeholder="Enter your name"
+        required
+        pattern="[A-Za-z]{3,30}"
+        title="At least 3 letters & less than 30"
+        class="input"
+        id="name"
+        name="name"
+        type="text"
+      />
+      <label class="input-label" for="age">Age:</label>
+      <input
+        placeholder="Enter your age"
+        required
+        min="1"
+        max="120"
+        class="input"
+        class="input"
+        id="age"
+        name="age"
+        type="number"
+      />
+      <label class="input-label" for="mobile">Mobile:</label>
+      <input
+        placeholder="Enter your mobile number"
+        required
+        pattern="[1-9+]{7,15}"
+        class="input"
+        id="mobile"
+        name="mobile"
+        type="tel"
+      />
+      <label class="input-label" for="doctors">Doctor:</label>
+      <select class="input" name="doctors" id="doctors" required></select>
+      <label class="input-label" for="date">Date:</label>
+      <input class="input" id="date" name="date" type="date" required />
+      <label class="input-label" for="time">Time:</label>
+      <input class="input" id="time" name="time" type="time" required />
+      <input class="input" id="submit" type="submit" value="Add" />
+    </form>
+  </section>
+
+</body>
+</html>
