@@ -1,5 +1,5 @@
-const connection = require('./../config/connection');
+const connection = require('../config/connection');
 
-const getAllAppointmentsFromDB = () => connection.query('SELECT name, age, date, time, mobile FROM appointments');
+const getAllAppointmentsFromDB = () => connection.query('SELECT id, name, age, date, time, mobile FROM appointments');
 
 module.exports = getAllAppointmentsFromDB;

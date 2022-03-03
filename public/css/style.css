@@ -20,7 +20,20 @@ input:focus {
   color: #fff;
   opacity: 1;
 } */
-
+.back-home{
+  width: 100%;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 30px 0 0 10px;
+}
+.back-home a{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #38c6f4;
+}
 .landing-page {
   display: flex;
   flex-direction: column;
@@ -57,8 +70,7 @@ input:focus {
   background-color: #38c6f4;
   color: #fff;
   font-weight: bold;
-  height: 42px;
-  padding: 0 20px;
+  padding: 10px 20px;
   border-radius: 5px;
   margin: 12px 0;
   transition-duration: 0.3s;
@@ -124,8 +136,8 @@ input:focus {
 
 
 .search-button {
-  cursor: pointer;
   all: unset;
+  cursor: pointer;
   background-color: #38c6f4;
   border-radius: 3px;
   color: #fff;
@@ -139,16 +151,46 @@ input:focus {
 .appointment-card {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
-  margin-bottom: 10px;
   width: 300px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 30px;
+  padding: 20px;
   font-size: 20px;
+}
+.delete-btn{
+  cursor: pointer;
+  all:unset;
+  color: #fff;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background-color: rgb(237, 25, 25);
+  margin-top: 10px;
+  align-self: center;
 }
 .line {
   width: 100%;
 }
+
+@media (min-width: 1200px) {
+  .landing-page{
+    gap: 10px;
+  }
+  .app-title{
+    font-size: 60px;
+  }
+  .app-logo{
+    width: 400px;
+    height: 400px;
+  }
+  #add-appointment-form{
+    width: 50%;
+  }
+  .back-home{
+    position: absolute;
+    left: 40px;
+  }
+}
+

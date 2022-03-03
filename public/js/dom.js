@@ -7,6 +7,16 @@ const cards = document.querySelector('.cards');
 const searchBar = document.querySelector('.search-input');
 const searchBtn = document.querySelector('.search-button');
 
+const deleteAppointment = (element, id) => {
+  element.addEventListener('click', () => {
+    fetch(`/appointments/${id}`, {
+      method: 'DELETE',
+    }).then(() => {
+      element.parentElement.remove();
+    });
+  });
+};
+
 fetch('/doctors')
   .then((response) => response.json())
   .then((data) => {
@@ -33,8 +43,9 @@ loginForm?.addEventListener('submit', (e) => {
     .then((data) => {
       if (data.message === 'success') {
         window.location = '/html/appointments-table-page.html';
-      } else {
+      } else if (!document.getElementById('erroMessage')) {
         const errorMassege = document.createElement('p');
+        errorMassege.setAttribute('id', 'erroMessage');
         errorMassege.textContent = '';
         errorMassege.textContent = 'INVALID DOCTOR!';
         errorMassege.style.color = 'red';
@@ -56,18 +67,23 @@ fetch('/appointments')
       const date = document.createElement('p');
       const time = document.createElement('p');
       const mobile = document.createElement('p');
+      const deleteBTN = document.createElement('button');
+      deleteBTN.classList.add('delete-btn');
+      deleteBTN.setAttribute('id', `${element.id}`);
 
       name.textContent = `Name: ${element.name}`;
       age.textContent = `Age: ${element.age}`;
       date.textContent = `Date: ${element.date.split('T')[0]}`;
       time.textContent = `Time: ${element.time}`;
       mobile.textContent = `Time: ${element.mobile}`;
-
+      deleteBTN.textContent = 'Delete';
+      deleteAppointment(deleteBTN, element.id);
       appointmentCard.appendChild(name);
       appointmentCard.appendChild(age);
       appointmentCard.appendChild(date);
       appointmentCard.appendChild(time);
       appointmentCard.appendChild(mobile);
+      appointmentCard.appendChild(deleteBTN);
 
       cards?.appendChild(appointmentCard);
     });
@@ -92,18 +108,22 @@ searchBtn?.addEventListener('click', () => {
         const date = document.createElement('p');
         const time = document.createElement('p');
         const mobile = document.createElement('p');
-
+        const deleteBTN = document.createElement('button');
+        deleteBTN.classList.add('delete-btn');
+        deleteBTN.setAttribute('id', `${element.id}`);
         name.textContent = `Name: ${element.name}`;
         age.textContent = `Age: ${element.age}`;
         date.textContent = `Date: ${element.date.split('T')[0]}`;
         time.textContent = `Time: ${element.time}`;
         mobile.textContent = `Time: ${element.mobile}`;
+        deleteBTN.textContent = 'Delete';
 
         appointmentCard.appendChild(name);
         appointmentCard.appendChild(age);
         appointmentCard.appendChild(date);
         appointmentCard.appendChild(time);
         appointmentCard.appendChild(mobile);
+        appointmentCard.appendChild(deleteBTN);
 
         cards?.appendChild(appointmentCard);
       });
