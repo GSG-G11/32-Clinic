@@ -4,7 +4,7 @@
 - [Problem](#desc)
 - [Solution](#Solution)
 - [Live link](#live)
-- [User Story](#story)
+- [User Journey](#story)
 - [Team members](#team)
 - [Built with](#built)
 # **Description** <span id='DESCRIPTION'></span>
@@ -16,7 +16,7 @@ The problem was solved by developing an application that made it easier for pati
 # **Live link** <span id='live'></span>
 ># [Live Demo](https://clinic-32.herokuapp.com/)
 
-# **User Story** <span id='story'></span>
+# **User Journey** <span id='story'></span>
 You'll be greeted with a screen where you may select whether you're a patient or a doctor. You may simply arrange an appointment as a patient by filling out a form. You may see all of your appointments as a doctor and search by patient name to see what appointments he has.
 # **Application Schema** <span id='story'></span>
 ![](https://i.imgur.com/FIwz9sv.png)
