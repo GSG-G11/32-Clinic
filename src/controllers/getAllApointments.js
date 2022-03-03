@@ -1,4 +1,4 @@
-const getAllAppointmentsFromDB = require("../database/queries/getAllAppointmentsFromDB");
+const getAllAppointmentsFromDB = require('../database/queries/getAllAppointmentsFromDB');
 
 const getAllAppointments = (req, res) => {
   getAllAppointmentsFromDB()

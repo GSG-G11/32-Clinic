@@ -2,7 +2,7 @@ const express = require('express');
 const compression = require('compression');
 const { join } = require('path');
 const router = require('./routes/index');
-const { pageNotFoundError, serverError } = require('./controllers/error');
+const { pageNotFoundError, serverError } = require('./controllers');
 require('env2')('.env');
 
 const app = express();
